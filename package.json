@@ -12,6 +12,7 @@
     "swagger-express-mw": "^0.1.0"
   },
   "devDependencies": {
+    "eslint": "^6.5.1",
     "should": "^7.1.0",
     "supertest": "^1.0.0"
   },
