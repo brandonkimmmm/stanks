@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
-		birthday: {
+		dob: {
 			type: DataTypes.DATE,
 			allowNull: false
 		}
@@ -43,6 +43,12 @@ module.exports = (sequelize, DataTypes) => {
 
 	User.beforeCreate((user) => {
 		user.email = user.email.toLowerCase();
+		let firstName = user.first_name.toLowerCase();
+		firstName[0] = firstName[0].toUpperCase();
+		user.first_name = firstName;
+		let lastName = user.last_name.toLowerCase();
+		lastName[0] = lastName[0].toUpperCase();
+		user.last_name = lastName;
 		return bcrypt.generateHash(user.password).then((hash) => {
 			user.password = hash;
 		});
