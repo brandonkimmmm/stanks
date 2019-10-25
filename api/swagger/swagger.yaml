@@ -32,43 +32,50 @@ paths:
           description: Error
           schema:
             type: object
-  /hello:
-    # binds a127 app logic to a route
-    x-swagger-router-controller: hello_world
-    get:
-      description: Returns 'Hello' to the caller
-      # used as the method name of the controller
-      operationId: hello
+  /signup:
+    x-swagger-router-controller: user
+    post:
+      description: Signup user
+      operationId: signup
       parameters:
-        - name: name
-          in: query
-          description: The name of the person to whom to say hello
-          required: false
-          type: string
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/UserAuthentication"
       responses:
-        "200":
+        "201":
           description: Success
           schema:
-            # a pointer to a definition
-            $ref: "#/definitions/HelloWorldResponse"
-        # responses may fall through to errors
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
+            $ref: "#/definitions/MessageResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
 definitions:
-  HelloWorldResponse:
+  MessageResponse:
     required:
       - message
     properties:
       message:
         type: string
-  ErrorResponse:
+  UserAuthentication:
     required:
-      - message
+      - firstName
+      - lastName
+      - username
+      - email
+      - password
+      - dob
     properties:
-      message:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      username:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      dob:
         type: string

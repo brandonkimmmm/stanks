@@ -4,12 +4,12 @@ const bcrypt = require('bcrypt');
 
 module.exports = (sequelize, DataTypes) => {
 	const User = sequelize.define('User', {
-		first_name: {
+		firstName: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			unique: true
 		},
-		last_name: {
+		lastName: {
 			type: DataTypes.STRING,
 			allowNull: false
 		},
@@ -32,8 +32,6 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		}
 	}, {
-		timestamp: true,
-		underscored: true,
 		instanceMethods: {
 			validPassword(password) {
 				return bcrypt.compareSync(password, this.password);
@@ -43,13 +41,9 @@ module.exports = (sequelize, DataTypes) => {
 
 	User.beforeCreate((user) => {
 		user.email = user.email.toLowerCase();
-		let firstName = user.first_name.toLowerCase();
-		firstName[0] = firstName[0].toUpperCase();
-		user.first_name = firstName;
-		let lastName = user.last_name.toLowerCase();
-		lastName[0] = lastName[0].toUpperCase();
-		user.last_name = lastName;
-		return bcrypt.generateHash(user.password).then((hash) => {
+		user.firstName = user.firstName.charAt(0).toUpperCase(0) + user.firstName.slice(1);
+		user.lastName = user.lastName.charAt(0).toUpperCase(0) + user.lastName.slice(1);
+		return bcrypt.hash(user.password, 8).then((hash) => {
 			user.password = hash;
 		});
 	});
