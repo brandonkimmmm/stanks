@@ -1,6 +1,6 @@
 'use strict';
 
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 module.exports = {
 	up: (queryInterface, Sequelize) => {
@@ -10,8 +10,8 @@ module.exports = {
 			email: 'bkim2490@gmail.com',
 			username: 'brandonkimmmm',
 			password: 'asdf1234',
-			dob: moment('1990-12-24 08:10:00').tz('Asia/Korea').format()
-		}])
+			dob: moment('1990-12-24 08:10:00').tz('Asia/Seoul').format()
+		}]);
 	},
 
 	down: (queryInterface, Sequelize) => {

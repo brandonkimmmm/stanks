@@ -3,7 +3,7 @@
 module.exports = {
 	'development': {
 		'username': 'postgres',
-		'password': null,
+		'password': 'postgres',
 		'database': 'stanks',
 		'host': '127.0.0.1',
 		'port': 5432,
