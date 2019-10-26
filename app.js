@@ -2,6 +2,7 @@
 
 var SwaggerExpress = require('swagger-express-mw');
 var app = require('express')();
+require('dotenv').config();
 module.exports = app; // for testing
 
 var config = {
