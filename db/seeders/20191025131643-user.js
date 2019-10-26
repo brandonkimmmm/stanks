@@ -10,8 +10,8 @@ bcrypt.hash('asdf1234', 8).then((data) => {
 module.exports = {
 	up: (queryInterface, Sequelize) => {
 		return queryInterface.bulkInsert('Users', [{
-			firstName: 'brandon',
-			lastName: 'kim',
+			first_name: 'brandon',
+			last_name: 'kim',
 			email: 'bkim2490@gmail.com',
 			username: 'brandonkimmmm',
 			password,

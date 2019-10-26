@@ -5,7 +5,7 @@ const { isEmail } = require('validator');
 const { issueToken } = require('../helpers/token');
 
 const signup = (req, res) => {
-	const { firstName, lastName, username, email, password, dob } = req.swagger.params.data.value;
+	const { first_name, last_name, username, email, password, dob } = req.swagger.params.data.value;
 	if (!isEmail(email)) throw new Error('Must enter a valid email');
 	User.findOne({
 		where: {
@@ -15,8 +15,8 @@ const signup = (req, res) => {
 		.then((user) => {
 			if (user) throw new Error('User already exists');
 			return User.create({
-				firstName,
-				lastName,
+				first_name,
+				last_name,
 				password,
 				dob,
 				username,

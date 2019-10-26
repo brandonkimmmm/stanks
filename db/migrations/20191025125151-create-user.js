@@ -8,11 +8,11 @@ module.exports = {
 				primaryKey: true,
 				type: Sequelize.INTEGER
 			},
-			firstName: {
+			first_name: {
 				type: Sequelize.STRING,
 				allowNull: false
 			},
-			lastName: {
+			last_name: {
 				type: Sequelize.STRING,
 				allowNull: false
 			},
@@ -33,18 +33,19 @@ module.exports = {
 				type: Sequelize.DATE,
 				allowNull: false
 			},
-			createdAt: {
+			created_at: {
 				allowNull: false,
 				type: Sequelize.DATE,
 				defaultValue: Sequelize.literal('NOW()')
 			},
-			updatedAt: {
+			updated_at: {
 				allowNull: false,
 				type: Sequelize.DATE,
 				defaultValue: Sequelize.literal('NOW()')
 			}
 		}, {
 			timestamps: true,
+			underscored: true
 		});
 	},
 	down: (queryInterface, Sequelize) => {

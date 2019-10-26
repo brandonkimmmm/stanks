@@ -83,16 +83,16 @@ definitions:
         type: string
   UserAuthentication:
     required:
-      - firstName
-      - lastName
+      - first_name
+      - last_name
       - username
       - email
       - password
       - dob
     properties:
-      firstName:
+      first_name:
         type: string
-      lastName:
+      last_name:
         type: string
       username:
         type: string
