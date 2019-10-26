@@ -48,6 +48,29 @@ paths:
           description: Success
           schema:
             $ref: "#/definitions/MessageResponse"
+  /login:
+    x-swagger-router-controller: user
+    post:
+      description: Login user
+      operationId: login
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/UserAuthorization"
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+        "403":
+          description: "Access Denied"
+          schema:
+            $ref: "#/definitions/MessageResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -78,4 +101,13 @@ definitions:
       password:
         type: string
       dob:
+        type: string
+  UserAuthorization:
+    required:
+      - password
+      - email
+    properties:
+      password:
+        type: string
+      email:
         type: string

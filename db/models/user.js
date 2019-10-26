@@ -30,13 +30,7 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.DATE,
 			allowNull: false
 		}
-	}, {
-		instanceMethods: {
-			validPassword(password) {
-				return bcrypt.compareSync(password, this.password);
-			}
-		}
-	});
+	}, {});
 
 	User.beforeCreate((user) => {
 		user.email = user.email.toLowerCase();
@@ -50,5 +44,11 @@ module.exports = (sequelize, DataTypes) => {
 	User.associate = function(models) {
 		// associations can be defined here
 	};
+
+	User.prototype.validatePassword = function(password) {
+		console.log(password, this.password)
+		return bcrypt.compareSync(password, this.password);
+	};
+
 	return User;
 };
