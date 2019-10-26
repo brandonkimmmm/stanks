@@ -2,9 +2,11 @@
 
 const { User } = require('../../db/models');
 const Op = require('sequelize').Op;
+const { isEmail } = require('validator');
 
 const signup = (req, res) => {
 	const { firstName, lastName, username, email, password, dob } = req.swagger.params.data.value;
+	if (!isEmail(email)) throw new Error('Must enter a valid email');
 	User.findOne({
 		where: {
 			[Op.or]: [
