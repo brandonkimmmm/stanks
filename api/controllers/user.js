@@ -1,7 +1,6 @@
 'use strict';
 
 const { User } = require('../../db/models');
-const Op = require('sequelize').Op;
 const { isEmail } = require('validator');
 
 const signup = (req, res) => {
@@ -9,22 +8,11 @@ const signup = (req, res) => {
 	if (!isEmail(email)) throw new Error('Must enter a valid email');
 	User.findOne({
 		where: {
-			[Op.or]: [
-				{
-					email: {
-						[Op.eq]: email
-					}
-				},
-				{
-					username: {
-						[Op.eq]: username
-					}
-				}
-			]
+			email
 		}
 	})
 		.then((user) => {
-			if (user) throw new Error('User already exists')
+			if (user) throw new Error('User already exists');
 		})
 		.then(() => {
 			return User.create({
