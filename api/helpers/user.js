@@ -14,9 +14,9 @@ const loginUser = (email, password) => {
 			if (!user.validatePassword(password)) throw new Error ('Not Authorized');
 			return issueToken(user);
 		});
-}
+};
 
-const findUser = (email) => {
+const findUserByEmail = (email) => {
 	return User.findOne({
 		where: {
 			email: email.toLowerCase()
@@ -32,6 +32,6 @@ const findUser = (email) => {
 };
 
 module.exports = {
-	findUser,
+	findUserByEmail,
 	loginUser
 }
