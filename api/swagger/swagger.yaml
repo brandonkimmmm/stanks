@@ -17,6 +17,12 @@ consumes:
 # format of the responses to the client (Accepts)
 produces:
   - application/json
+securityDefinitions:
+  Bearer:
+    description: JWT authentication
+    type: apiKey
+    name: Authorization
+    in: header
 paths:
   /health:
     x-swagger-router-controller: general
@@ -71,6 +77,27 @@ paths:
           description: "Access Denied"
           schema:
             $ref: "#/definitions/MessageResponse"
+  /user:
+    x-swagger-router-controller: user
+    get:
+      description: Get user information
+      operationId: getUser
+      parameters:
+        - name: email
+          in: query
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/UserResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
+      security:
+        - Bearer: []
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -102,6 +129,7 @@ definitions:
         type: string
       dob:
         type: string
+        format: date-time
   UserAuthorization:
     required:
       - password
@@ -111,3 +139,26 @@ definitions:
         type: string
       email:
         type: string
+  UserResponse:
+    required:
+      - id
+      - email
+      - username
+      - first_name
+      - last_name
+      - dob
+    properties:
+      id:
+        type: number
+        format: int32
+      email:
+        type: string
+      username:
+        type: string
+      first_name:
+        type: string
+      last_name:
+        type: string
+      dob:
+        type: string
+        format: date-time
