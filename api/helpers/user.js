@@ -3,6 +3,14 @@
 const { User } = require('../../db/models');
 const { issueToken } = require('./token');
 
+const findUser = (email) => {
+	return User.findOne({
+		where: {
+			email
+		}
+	});
+};
+
 const loginUser = (email, password) => {
 	return User.findOne({
 		where: {
