@@ -31,6 +31,8 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		}
 	}, {
+		createdAt: 'created_at',
+  		updatedAt: 'updated_at',
 		underscored: true,
 		tableName: 'Users'
 	});
