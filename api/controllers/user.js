@@ -2,7 +2,7 @@
 
 const { User } = require('../../db/models');
 const { isEmail } = require('validator');
-const { issueToken } = require('../helpers/token');
+const { loginUser, findUser } = require('../helpers/user');
 
 const signup = (req, res) => {
 	const { first_name, last_name, username, email, password, dob } = req.swagger.params.data.value;
@@ -34,16 +34,8 @@ const signup = (req, res) => {
 const login = (req, res) => {
 	const { email, password } = req.swagger.params.data.value;
 	if (!isEmail(email)) throw new Error('Invalid email');
-	User.findOne({
-		where: {
-			email
-		}
-	})
-		.then((user) => {
-			if (!user) throw new Error ('Email not found');
-			if (!user.validatePassword(password)) throw new Error ('Not Authorized');
-			return issueToken(user);
-		})
+
+	loginUser(email, password)
 		.then((token) => {
 			res.json({ token });
 		})
@@ -52,7 +44,21 @@ const login = (req, res) => {
 		});
 };
 
+const getUser = (req, res) => {
+	const email = req.swagger.params.email.value;
+	if (!isEmail(email)) throw new Error('Invalid email');
+
+	findUser(email)
+		.then((user) => {
+			res.json(user);
+		})
+		.catch((error) => {
+			res.status(error.status || 400).json({ message: error.message });
+		})
+}
+
 module.exports = {
 	signup,
-	login
+	login,
+	getUser
 };

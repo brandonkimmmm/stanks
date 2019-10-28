@@ -129,7 +129,6 @@ definitions:
         type: string
       dob:
         type: string
-        format: date-time
   UserAuthorization:
     required:
       - password
@@ -147,6 +146,8 @@ definitions:
       - first_name
       - last_name
       - dob
+      - created_at
+      - updated_at
     properties:
       id:
         type: number
@@ -160,5 +161,11 @@ definitions:
       last_name:
         type: string
       dob:
+        type: string
+        format: date-time
+      created_at:
+        type: string
+        format: date-time
+      updated_at:
         type: string
         format: date-time
