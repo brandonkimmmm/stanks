@@ -1,11 +1,19 @@
 'use strict';
 
+require('dotenv').config();
+
+const { createServer } = require('http');
 var SwaggerExpress = require('swagger-express-mw');
 var app = require('express')();
-require('dotenv').config();
-module.exports = app; // for testing
-
+const morgan = require('morgan');
+const { stream, logger } = require('./config/logger');
 const { validateToken } = require('./api/helpers/auth');
+
+const PORT = process.env.PORT || 10010;
+
+const server = createServer(app);
+
+module.exports = app; // for testing
 
 var config = {
 	appRoot: __dirname, // required config
@@ -14,16 +22,15 @@ var config = {
 	}
 };
 
+app.use(morgan('dev', { stream }));
+
 SwaggerExpress.create(config, function(err, swaggerExpress) {
 	if (err) { throw err; }
 
 	// install middleware
 	swaggerExpress.register(app);
 
-	var port = process.env.PORT || 10010;
-	app.listen(port);
-
-	if (swaggerExpress.runner.swagger.paths['/hello']) {
-		console.log('try this:\ncurl http://127.0.0.1:' + port + '/hello?name=Scott');
-	}
+	server.listen(PORT, () => {
+		logger.info(`Server running on port: ${PORT}`);
+	});
 });
