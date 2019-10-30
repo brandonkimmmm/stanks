@@ -19,7 +19,7 @@ const loginUser = (email, password) => {
 	})
 		.then((user) => {
 			if (!user) throw new Error ('Email not found');
-			if (!user.validatePassword(password)) throw new Error ('Not Authorized');
+			if (!user.validatePassword(password)) throw new Error ('Wrong Password');
 			return issueToken(user);
 		});
 };
@@ -59,8 +59,20 @@ const updateUser = (email, username) => {
 		});
 };
 
+const changePassword = (email, old_password, new_password) => {
+	return findUser(email)
+		.then((user) => {
+			if (!user) throw new Error('User not found');
+			if (!user.validatePassword(old_password)) throw new Error ('Wrong Password');
+			user.update({
+				password: new_password
+			});
+		});
+};
+
 module.exports = {
 	findUserByEmail,
 	loginUser,
-	updateUser
+	updateUser,
+	changePassword
 };

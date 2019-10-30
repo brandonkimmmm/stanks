@@ -32,18 +32,26 @@ module.exports = (sequelize, DataTypes) => {
 		}
 	}, {
 		createdAt: 'created_at',
-  		updatedAt: 'updated_at',
+		updatedAt: 'updated_at',
 		underscored: true,
-		tableName: 'Users'
-	});
-
-	User.beforeCreate((user) => {
-		user.email = user.email.toLowerCase();
-		user.first_name = user.first_name.charAt(0).toUpperCase(0) + user.first_name.slice(1);
-		user.last_name = user.last_name.charAt(0).toUpperCase(0) + user.last_name.slice(1);
-		return bcrypt.hash(user.password, 8).then((hash) => {
-			user.password = hash;
-		});
+		tableName: 'Users',
+		hooks: {
+			beforeCreate: (user) => {
+				user.email = user.email.toLowerCase();
+				user.first_name = user.first_name.charAt(0).toUpperCase(0) + user.first_name.slice(1);
+				user.last_name = user.last_name.charAt(0).toUpperCase(0) + user.last_name.slice(1);
+				return bcrypt.hash(user.password, 8).then((hash) => {
+					user.password = hash;
+				});
+			},
+			beforeUpdate: (user) => {
+				if (user.password) {
+					return bcrypt.hash(user.password, 8).then((hash) => {
+						user.password = hash;
+					});
+				}
+			}
+		}
 	});
 
 	User.associate = function(models) {
@@ -51,7 +59,6 @@ module.exports = (sequelize, DataTypes) => {
 	};
 
 	User.prototype.validatePassword = function(password) {
-		console.log(password, this.password)
 		return bcrypt.compareSync(password, this.password);
 	};
 

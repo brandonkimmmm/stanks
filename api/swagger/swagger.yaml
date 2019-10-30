@@ -122,6 +122,32 @@ paths:
             $ref: "#/definitions/MessageResponse"
       security:
         - Bearer: []
+  /user/change-password:
+    x-swagger-router-controller: user
+    put:
+      description: Change user password
+      operationId: changeUserPassword
+      parameters:
+        - name: email
+          in: query
+          required: true
+          type: string
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/ChangePassword"
+      responses:
+        "201":
+          description: Success
+          schema:
+            $ref: "#/definitions/MessageResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
+      security:
+        - Bearer: []
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -199,4 +225,14 @@ definitions:
       - username
     properties:
       username:
+        type: string
+  ChangePassword:
+    type: object
+    required:
+      - old_password
+      - new_password
+    properties:
+      old_password:
+        type: string
+      new_password:
         type: string
