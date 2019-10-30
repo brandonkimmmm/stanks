@@ -4,9 +4,9 @@ info:
   title: Stanks
 # during dev, should point to your local machine
 host: localhost:10010
-# basePath prefixes all resource paths 
+# basePath prefixes all resource paths
 basePath: /v0
-# 
+#
 schemes:
   # tip: remove http to make production-grade
   - http
@@ -98,6 +98,30 @@ paths:
             $ref: "#/definitions/MessageResponse"
       security:
         - Bearer: []
+    put:
+      description: Update user information
+      operationId: putUser
+      parameters:
+        - name: email
+          in: query
+          required: true
+          type: string
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/PutUser"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/UserResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
+      security:
+        - Bearer: []
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -131,8 +155,8 @@ definitions:
         type: string
   UserAuthorization:
     required:
-      - password
       - email
+      - password
     properties:
       password:
         type: string
@@ -169,3 +193,10 @@ definitions:
       updated_at:
         type: string
         format: date-time
+  PutUser:
+    type: object
+    required:
+      - username
+    properties:
+      username:
+        type: string

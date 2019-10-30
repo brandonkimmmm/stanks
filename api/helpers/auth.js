@@ -11,6 +11,7 @@ const validateToken = (req, securityDescription, token, cb) => {
 		const tokenString = token.split(' ')[1];
 		jwt.verify(tokenString, SECRET, (error, token) => {
 			if (!error && token) {
+				req.auth = token;
 				cb(null);
 			} else {
 				cb(sendError('Invalid Token'));

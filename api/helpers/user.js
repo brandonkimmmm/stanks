@@ -39,7 +39,28 @@ const findUserByEmail = (email) => {
 		});
 };
 
+const updateUser = (email, username) => {
+	const updateData = {};
+	if (username) updateData.username = username;
+	return findUser(email)
+		.then((user) => {
+			if (!user) throw new Error('User not found');
+			return user.update(
+				updateData,
+				{
+					fields: ['username'],
+					returning: true
+				}
+			);
+		})
+		.then((user) => {
+			delete user.dataValues.password;
+			return user;
+		});
+};
+
 module.exports = {
 	findUserByEmail,
-	loginUser
-}
+	loginUser,
+	updateUser
+};

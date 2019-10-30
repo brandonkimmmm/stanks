@@ -2,7 +2,7 @@
 
 const { User } = require('../../db/models');
 const { isEmail } = require('validator');
-const { loginUser, findUserByEmail } = require('../helpers/user');
+const { loginUser, findUserByEmail, updateUser } = require('../helpers/user');
 
 const signup = (req, res) => {
 	const { first_name, last_name, username, email, password, dob } = req.swagger.params.data.value;
@@ -57,8 +57,24 @@ const getUser = (req, res) => {
 		});
 };
 
+const putUser = (req, res) => {
+	const email = req.swagger.params.email.value;
+	const { username } = req.swagger.params.data.value;
+
+	if (req.auth.sub.id.email !== email) throw new Error('Not Authorized');
+
+	updateUser(email, username)
+		.then((user) => {
+			res.json(user);
+		})
+		.catch((error) => {
+			res.status(error.status || 400).json({ message: error.message });
+		});
+};
+
 module.exports = {
 	signup,
 	login,
-	getUser
+	getUser,
+	putUser
 };
