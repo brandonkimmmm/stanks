@@ -1,0 +1,410 @@
+{
+	"LeBron James": {
+		"player_id": 2544,
+		"draft": 2003,
+		"retired": null,
+		"dob": "1984-12-30",
+		"dob_within_season": true,
+		"nickname": "King James"
+	},
+	"Giannis Antetokounmpo": {
+		"player_id": 203507,
+		"draft": 2013,
+		"retired": null,
+		"dob": "1994-12-06",
+		"dob_within_season": true,
+		"nickname": "The Greek Freak"
+	},
+	"Paul George": {
+		"player_id": 202331,
+		"draft": 2010,
+		"retired": null,
+		"dob": "1990-05-02",
+		"dob_within_season": true,
+		"nickname": "PG-13"
+	},
+	"Nikola Jokic": {
+		"player_id": 203999,
+		"draft": 2012,
+		"retired": null,
+		"dob": "1995-02-19",
+		"dob_within_season": true,
+		"nickname": "Joker"
+	},
+	"James Harden": {
+		"player_id": 201935,
+		"draft": 2009,
+		"retired": null,
+		"dob": "1989-08-26",
+		"dob_within_season": false,
+		"nickname": "The Beard"
+	},
+	"Stephen Curry": {
+		"player_id": 201939,
+		"draft": 2009,
+		"retired": null,
+		"dob": "1988-03-14",
+		"dob_within_season": true,
+		"nickname": "Chef Curry"
+	},
+	"Kevin Durant": {
+		"player_id": 201142,
+		"draft": 2007,
+		"retired": null,
+		"dob": "1988-09-29",
+		"dob_within_season": false,
+		"nickname": "KD"
+	},
+	"Kawhi Leonard": {
+		"player_id": 202695,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1991-06-29",
+		"dob_within_season": false,
+		"nickname": "The Claw"
+	},
+	"Joel Embiid": {
+		"player_id": 203954,
+		"draft": 2016,
+		"retired": null,
+		"dob": "1994-03-16",
+		"dob_within_season": true,
+		"nickname": "The Process"
+	},
+	"Damian Lillard": {
+		"player_id": 203081,
+		"draft": 2012,
+		"retired": null,
+		"dob": "1990-06-15",
+		"dob_within_season": false,
+		"nickname": "Dame D.O.L.L.A."
+	},
+	"Kyrie Irving": {
+		"player_id": 202681,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1992-03-23",
+		"dob_within_season": true,
+		"nickname": "Uncle Drew"
+	},
+	"Blake Griffin": {
+		"player_id": 201933,
+		"draft": 2010,
+		"retired": null,
+		"dob": "1989-03-16",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Rudy Gobert": {
+		"player_id": 203497,
+		"draft": 2013,
+		"retired": null,
+		"dob": "1992-06-26",
+		"dob_within_season": false,
+		"nickname": "The Stifle Tower"
+	},
+	"Russell Westbrook": {
+		"player_id": 201566,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1988-11-12",
+		"dob_within_season": true,
+		"nickname": "The Brodie"
+	},
+	"Kemba Walker": {
+		"player_id": 202689,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1990-05-08",
+		"dob_within_season": true,
+		"nickname": "Cardiac Kemba"
+	},
+	"Anthony Davis": {
+		"player_id": 203076,
+		"draft": 2012,
+		"retired": null,
+		"dob": "1993-03-11",
+		"dob_within_season": true,
+		"nickname": "The Brow"
+	},
+	"LaMarcus Aldridge": {
+		"player_id": 200746,
+		"draft": 2006,
+		"retired": null,
+		"dob": "1985-07-19",
+		"dob_within_season": false,
+		"nickname": "LMA"
+	},
+	"DeMar DeRozan": {
+		"player_id": 201942,
+		"draft": 2009,
+		"retired": null,
+		"dob": "1989-08-07",
+		"dob_within_season": false,
+		"nickname": "Deebo"
+	},
+	"Jimmy Butler": {
+		"player_id": 202710,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1989-09-14",
+		"dob_within_season": false,
+		"nickname": "Jimmy Buckets"
+	},
+	"Karl-Anthony Towns": {
+		"player_id": 1626157,
+		"draft": 2015,
+		"retired": null,
+		"dob": "1995-11-15",
+		"dob_within_season": true,
+		"nickname": "KAT"
+	},
+	"Victor Oladipo": {
+		"player_id": 203506,
+		"draft": 2013,
+		"retired": null,
+		"dob": "1992-05-04",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Isaiah Thomas": {
+		"player_id": 202738,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1989-02-07",
+		"dob_within_season": true,
+		"nickname": "King in the Fourth"
+	},
+	"Draymond Green": {
+		"player_id": 203110,
+		"draft": 2012,
+		"retired": null,
+		"dob": "1990-03-04",
+		"dob_within_season": true,
+		"nickname": "Day-Day"
+	},
+	"DeMarcus Cousins": {
+		"player_id": 202326,
+		"draft": 2010,
+		"retired": null,
+		"dob": "1990-08-13",
+		"dob_within_season": false,
+		"nickname": "Boogie"
+	},
+	"Chris Paul": {
+		"player_id": 101108,
+		"draft": 2005,
+		"retired": null,
+		"dob": "1985-05-06",
+		"dob_within_season": true,
+		"nickname": "CP3"
+	},
+	"Andre Drummond": {
+		"player_id": 203083,
+		"draft": 2012,
+		"retired": null,
+		"dob": "1993-08-10",
+		"dob_within_season": false,
+		"nickname": "Big Penguin"
+	},
+	"Klay Thompson": {
+		"player_id": 202691,
+		"draft": 2011,
+		"retired": null,
+		"dob": "1990-02-08",
+		"dob_within_season": true,
+		"nickname": "Big Smokey"
+	},
+	"Kyle Lowry": {
+		"player_id": 200768,
+		"draft": 2006,
+		"retired": null,
+		"dob": "1986-03-25",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Marc Gasol": {
+		"player_id": 201188,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1985-01-29",
+		"dob_within_season": true,
+		"nickname": "La Tanqueta"
+	},
+	"Pau Gasol": {
+		"player_id": 2200,
+		"draft": 2001,
+		"retired": null,
+		"dob": "1980-07-06",
+		"dob_within_season": false,
+		"nickname": "Meal Ticket"
+	},
+	"Tim Duncan": {
+		"player_id": 1495,
+		"draft": 1997,
+		"retired": 2016,
+		"dob": "1976-04-25",
+		"dob_within_season": true,
+		"nickname": "The Big Fundamental"
+	},
+	"DeAndre Jordan": {
+		"player_id": 201599,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1988-07-21",
+		"dob_within_season": false,
+		"nickname": "DeAndre 3000"
+	},
+	"Joakim Noah": {
+		"player_id": 201149,
+		"draft": 2007,
+		"retired": null,
+		"dob": "1985-02-25",
+		"dob_within_season": true,
+		"nickname": "Jo"
+	},
+	"Kevin Love": {
+		"player_id": 201567,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1988-09-07",
+		"dob_within_season": false,
+		"nickname": "K-Love"
+	},
+	"Dwight Howard": {
+		"player_id": 2730,
+		"draft": 2004,
+		"retired": null,
+		"dob": "1985-12-08",
+		"dob_within_season": true,
+		"nickname": "D12"
+	},
+	"Tony Parker": {
+		"player_id": 2225,
+		"draft": 2001,
+		"retired": 2019,
+		"dob": "1982-05-17",
+		"dob_within_season": true,
+		"nickname": "T.P."
+	},
+	"Al Jefferson": {
+		"player_id": 2744,
+		"draft": 2004,
+		"retired": 2018,
+		"dob": "1985-01-04",
+		"dob_within_season": true,
+		"nickname": "Big Classic"
+	},
+	"Goran Dragic": {
+		"player_id": 201609,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1986-05-06",
+		"dob_within_season": true,
+		"nickname": "The Dragon"
+	},
+	"Kobe Bryant": {
+		"player_id": 977,
+		"draft": 1996,
+		"retired": 2016,
+		"dob": "1978-08-23",
+		"dob_within_season": false,
+		"nickname": "Black Mamba"
+	},
+	"Carmelo Anthony": {
+		"player_id": 2546,
+		"draft": 2003,
+		"retired": 2019,
+		"dob": "1984-05-29",
+		"dob_within_season": true,
+		"nickname": "Melo"
+	},
+	"David Lee": {
+		"player_id": 101135,
+		"draft": 2005,
+		"retired": 2017,
+		"dob": "1983-04-29",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Dwyane Wade": {
+		"player_id": 2548,
+		"draft": 2003,
+		"retired": 2019,
+		"dob": "1982-01-17",
+		"dob_within_season": true,
+		"nickname": "Flash"
+	},
+	"Derrick Rose": {
+		"player_id": 201565,
+		"draft": 2008,
+		"retired": null,
+		"dob": "1988-10-04",
+		"dob_within_season": false,
+		"nickname": "D-Rose"
+	},
+	"Andrew Bynum": {
+		"player_id": 101115,
+		"draft": 2005,
+		"retired": 2014,
+		"dob": "1987-10-27",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Dirk Nowitzki": {
+		"player_id": 1717,
+		"draft": 2998,
+		"retired": 2019,
+		"dob": "1978-06-19",
+		"dob_within_season": true,
+		"nickname": "Dirty"
+	},
+	"Tyson Chandler": {
+		"player_id": 2199,
+		"draft": 2001,
+		"retired": null,
+		"dob": "1982-10-02",
+		"dob_within_season": false,
+		"nickname": null
+	},
+	"Rajon Rondo": {
+		"player_id": 200765,
+		"draft": 2006,
+		"retired": null,
+		"dob": "1986-02-22",
+		"dob_within_season": true,
+		"nickname": null
+	},
+	"Amar'e Stoudemire": {
+		"player_id": 2405,
+		"draft": 2002,
+		"retired": 2016,
+		"dob": "1982-11-16",
+		"dob_within_season": true,
+		"nickname": "S.T.A.T."
+	},
+	"Zach Randolph": {
+		"player_id": 2216,
+		"draft": 2001,
+		"retired": 2018,
+		"dob": "1981-07-16",
+		"dob_within_season": false,
+		"nickname": "Z-Bo"
+	},
+	"Al Horford": {
+		"player_id": 201143,
+		"draft": 2007,
+		"retired": null,
+		"dob": "1986-06-03",
+		"dob_within_season": false,
+		"nickname": "Godfather"
+	},
+	"Manu Ginobili": {
+		"player_id": 1938,
+		"draft": 2002,
+		"retired": 2018,
+		"dob": "1977-07-28",
+		"dob_within_season": false,
+		"nickname": "Gino"
+	}
+}
