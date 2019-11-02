@@ -30,7 +30,7 @@ module.exports = {
 				allowNull: false
 			},
 			dob: {
-				type: Sequelize.DATE,
+				type: Sequelize.STRING,
 				allowNull: false
 			},
 			created_at: {

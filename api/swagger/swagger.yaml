@@ -212,7 +212,6 @@ definitions:
         type: string
       dob:
         type: string
-        format: date-time
       created_at:
         type: string
         format: date-time
