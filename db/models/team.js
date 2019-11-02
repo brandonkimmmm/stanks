@@ -1,13 +1,37 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Team = sequelize.define('Team', {
-    full_name: DataTypes.STRING,
-    abbrev: DataTypes.STRING,
-    team_name: DataTypes.STRING,
-    city: DataTypes.STRING
-  }, {});
-  Team.associate = function(models) {
-    // associations can be defined here
-  };
-  return Team;
+	const Team = sequelize.define('Team', {
+		team_id: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			unique: true
+		},
+		full_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true
+		},
+		abbrev: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true
+		},
+		team_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			unique: true
+		},
+		city: {
+			type: DataTypes.STRING,
+			allowNull: false		}
+	}, {
+		createdAt: 'created_at',
+		updatedAt: 'updated_at',
+		underscored: true,
+		tableName: 'Teams'
+	});
+	Team.associate = function(models) {
+		// associations can be defined here
+	};
+	return Team;
 };

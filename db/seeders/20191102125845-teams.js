@@ -7,6 +7,7 @@ const teams = [];
 
 each(teamData, (value, key) => {
 	const data = {
+		team_id: value.TeamID,
 		full_name: key,
 		abbrev: value.Abbrev,
 		team_name: value.TeamName,
@@ -14,8 +15,6 @@ each(teamData, (value, key) => {
 	};
 	teams.push(data);
 });
-
-console.log(teams);
 
 module.exports = {
 	up: (queryInterface, Sequelize) => {

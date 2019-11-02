@@ -2,10 +2,7 @@
 
 const moment = require('moment-timezone');
 const bcrypt = require('bcrypt');
-let password;
-bcrypt.hash('asdf1234', 8).then((data) => {
-	password = data;
-});
+let password = bcrypt.hashSync('asdf1234', 8);
 
 module.exports = {
 	up: (queryInterface, Sequelize) => {
