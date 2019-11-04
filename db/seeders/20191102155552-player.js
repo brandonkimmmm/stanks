@@ -7,6 +7,7 @@ const players = [];
 each(playerData, (value, key) => {
 	const [ first_name, last_name ] = key.split(' ');
 	const data = {
+		full_name: key,
 		first_name,
 		last_name,
 		player_id: value.player_id,
