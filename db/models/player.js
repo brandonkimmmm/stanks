@@ -42,6 +42,7 @@ module.exports = (sequelize, DataTypes) => {
 	});
 	Player.associate = function(models) {
 		// associations can be defined here
+		Player.belongsToMany(models.Team, { through: models.Player_Team, as: 'teams', foreignKey: 'player_row_id' });
 	};
 	return Player;
 };
