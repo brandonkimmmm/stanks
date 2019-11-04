@@ -1,0 +1,832 @@
+{
+	"LeBron James": [
+		{
+			"team_id": 1610612739,
+			"from": 2003,
+			"to": 2010
+		},
+		{
+			"team_id": 1610612748,
+			"from": 2010,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612739,
+			"from": 2014,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2018,
+			"to": null
+		}
+	],
+	"Giannis Antetokounmpo": [
+		{
+			"team_id": 1610612749,
+			"from": 2013,
+			"to": null
+		}
+	],
+	"Paul George": [
+		{
+			"team_id": 1610612754,
+			"from": 2010,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612760,
+			"from": 2017,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612746,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Nikola Jokic": [
+		{
+			"team_id": 1610612743,
+			"from": 2015,
+			"to": null
+		}
+	],
+	"James Harden": [
+		{
+			"team_id": 1610612760,
+			"from": 2009,
+			"to": 2012
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2012,
+			"to": null
+		}
+	],
+	"Stephen Curry": [
+		{
+			"team_id": 1610612744,
+			"from": 2009,
+			"to": null
+		}
+	],
+	"Kevin Durant": [
+		{
+			"team_id": 1610612760,
+			"from": 2007,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612744,
+			"from": 2016,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612751,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Kawhi Leonard": [
+		{
+			"team_id": 1610612759,
+			"from": 2011,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612761,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612746,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Joel Embiid": [
+		{
+			"team_id": 1610612755,
+			"from": 2016,
+			"to": null
+		}
+	],
+	"Damian Lillard": [
+		{
+			"team_id": 1610612757,
+			"from": 2012,
+			"to": null
+		}
+	],
+	"Kyrie Irving": [
+		{
+			"team_id": 1610612739,
+			"from": 2011,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612738,
+			"from": 2017,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612751,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Blake Griffin": [
+		{
+			"team_id": 1610612746,
+			"from": 2010,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612765,
+			"from": 2017,
+			"to": null
+		}
+	],
+	"Rudy Gobert": [
+		{
+			"team_id": 1610612762,
+			"from": 2013,
+			"to": null
+		}
+	],
+	"Russell Westbrook": [
+		{
+			"team_id": 1610612760,
+			"from": 2008,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Kemba Walker": [
+		{
+			"team_id": 1610612766,
+			"from": 2011,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612738,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Anthony Davis": [
+		{
+			"team_id": 1610612740,
+			"from": 2012,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"LaMarcus Aldridge": [
+		{
+			"team_id": 1610612757,
+			"from": 2006,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612759,
+			"from": 2015,
+			"to": null
+		}
+	],
+	"DeMar DeRozan": [
+		{
+			"team_id": 1610612761,
+			"from": 2009,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612759,
+			"from": 2018,
+			"to": null
+		}
+	],
+	"Jimmy Butler": [
+		{
+			"team_id": 1610612741,
+			"from": 2011,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612750,
+			"from": 2017,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612755,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612748,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Karl-Anthony Towns": [
+		{
+			"team_id": 1610612750,
+			"from": 2015,
+			"to": null
+		}
+	],
+	"Victor Oladipo": [
+		{
+			"team_id": 1610612753,
+			"from": 2013,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612760,
+			"from": 2016,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612754,
+			"from": 2017,
+			"to": null
+		}
+	],
+	"Isaiah Thomas": [
+		{
+			"team_id": 1610612758,
+			"from": 2011,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612756,
+			"from": 2014,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612738,
+			"from": 2014,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612739,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612743,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612764,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Draymond Green": [
+		{
+			"team_id": 1610612744,
+			"from": 2012,
+			"to": null
+		}
+	],
+	"DeMarcus Cousins": [
+		{
+			"team_id": 1610612758,
+			"from": 2010,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612740,
+			"from": 2016,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612744,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Chris Paul": [
+		{
+			"team_id": 1610612740,
+			"from": 2005,
+			"to": 2011
+		},
+		{
+			"team_id": 1610612746,
+			"from": 2011,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2017,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612760,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Andre Drummond": [
+		{
+			"team_id": 1610612765,
+			"from": 2012,
+			"to": null
+		}
+	],
+	"Klay Thompson": [
+		{
+			"team_id": 1610612744,
+			"from": 2011,
+			"to": null
+		}
+	],
+	"Kyle Lowry": [
+		{
+			"team_id": 1610612763,
+			"from": 2006,
+			"to": 2009
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2008,
+			"to": 2012
+		},
+		{
+			"team_id": 1610612761,
+			"from": 2012,
+			"to": null
+		}
+	],
+	"Marc Gasol": [
+		{
+			"team_id": 1610612763,
+			"from": 2008,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612761,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Pau Gasol": [
+		{
+			"team_id": 1610612763,
+			"from": 2001,
+			"to": 2008
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2007,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612741,
+			"from": 2014,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612759,
+			"from": 2016,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612749,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Tim Duncan": [
+		{
+			"team_id": 1610612759,
+			"from": 1997,
+			"to": 2016
+		}
+	],
+	"DeAndre Jordan": [
+		{
+			"team_id": 1610612746,
+			"from": 2008,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612751,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Joakim Noah": [
+		{
+			"team_id": 1610612741,
+			"from": 2007,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2016,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612763,
+			"from": 2018,
+			"to": 2019
+		}
+	],
+	"Kevin Love": [
+		{
+			"team_id": 1610612750,
+			"from": 2008,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612739,
+			"from": 2014,
+			"to": null
+		}
+	],
+	"Dwight Howard": [
+		{
+			"team_id": 1610612753,
+			"from": 2004,
+			"to": 2012
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2012,
+			"to": 2013
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2013,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612737,
+			"from": 2016,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612766,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612764,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Tony Parker": [
+		{
+			"team_id": 1610612759,
+			"from": 2001,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612766,
+			"from": 2018,
+			"to": 2019
+		}
+	],
+	"Al Jefferson": [
+		{
+			"team_id": 1610612738,
+			"from": 2004,
+			"to": 2007
+		},
+		{
+			"team_id": 1610612750,
+			"from": 2007,
+			"to": 2010
+		},
+		{
+			"team_id": 1610612762,
+			"from": 2010,
+			"to": 2013
+		},
+		{
+			"team_id": 1610612766,
+			"from": 2013,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612754,
+			"from": 2016,
+			"to": 2018
+		}
+	],
+	"Goran Dragic": [
+		{
+			"team_id": 1610612756,
+			"from": 2008,
+			"to": 2011
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2010,
+			"to": 2012
+		},
+		{
+			"team_id": 1610612756,
+			"from": 2012,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612748,
+			"from": 2014,
+			"to": null
+		}
+	],
+	"Kobe Bryant": [
+		{
+			"team_id": 1610612747,
+			"from": 1996,
+			"to": 2016
+		}
+	],
+	"Carmelo Anthony": [
+		{
+			"team_id": 1610612743,
+			"from": 2003,
+			"to": 2011
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2010,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612760,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2018,
+			"to": 2019
+		}
+	],
+	"David Lee": [
+		{
+			"team_id": 1610612752,
+			"from": 2005,
+			"to": 2010
+		},
+		{
+			"team_id": 1610612744,
+			"from": 2010,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612738,
+			"from": 2015,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2015,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612759,
+			"from": 2016,
+			"to": 2017
+		}
+	],
+	"Dwyane Wade": [
+		{
+			"team_id": 1610612748,
+			"from": 2003,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612741,
+			"from": 2016,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612739,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612748,
+			"from": 2017,
+			"to": 2019
+		}
+	],
+	"Andrew Bynum": [
+		{
+			"team_id": 1610612747,
+			"from": 2005,
+			"to": 2012
+		},
+		{
+			"team_id": 1610612739,
+			"from": 2013,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612754,
+			"from": 2013,
+			"to": 2014
+		}
+	],
+	"Dirk Nowitzki": [
+		{
+			"team_id": 1610612742,
+			"from": 1998,
+			"to": 2019
+		}
+	],
+	"Tyson Chandler": [
+		{
+			"team_id": 1610612741,
+			"from": 2001,
+			"to": 2006
+		},
+		{
+			"team_id": 1610612740,
+			"from": 2006,
+			"to": 2009
+		},
+		{
+			"team_id": 1610612766,
+			"from": 2009,
+			"to": 2010
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2010,
+			"to": 2011
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2011,
+			"to": 2014
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2014,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612756,
+			"from": 2015,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2018,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612745,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Rajon Rondo": [
+		{
+			"team_id": 1610612738,
+			"from": 2006,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2014,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612758,
+			"from": 2015,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612741,
+			"from": 2016,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612740,
+			"from": 2017,
+			"to": 2018
+		},
+		{
+			"team_id": 1610612747,
+			"from": 2018,
+			"to": null
+		}
+	],
+	"Amar'e Stoudemire": [
+		{
+			"team_id": 1610612756,
+			"from": 2002,
+			"to": 2010
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2010,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612742,
+			"from": 2014,
+			"to": 2015
+		},
+		{
+			"team_id": 1610612748,
+			"from": 2015,
+			"to": 2016
+		}
+	],
+	"Zach Randolph": [
+		{
+			"team_id": 1610612757,
+			"from": 2001,
+			"to": 2007
+		},
+		{
+			"team_id": 1610612752,
+			"from": 2007,
+			"to": 2009
+		},
+		{
+			"team_id": 1610612746,
+			"from": 2008,
+			"to": 2009
+		},
+		{
+			"team_id": 1610612763,
+			"from": 2009,
+			"to": 2017
+		},
+		{
+			"team_id": 1610612758,
+			"from": 2017,
+			"to": 2018
+		}
+	],
+	"Al Horford": [
+		{
+			"team_id": 1610612737,
+			"from": 2007,
+			"to": 2016
+		},
+		{
+			"team_id": 1610612738,
+			"from": 2016,
+			"to": 2019
+		},
+		{
+			"team_id": 1610612755,
+			"from": 2019,
+			"to": null
+		}
+	],
+	"Manu Ginobili": [
+		{
+			"team_id": 1610612759,
+			"from": 2002,
+			"to": 2018
+		}
+	]
+}
