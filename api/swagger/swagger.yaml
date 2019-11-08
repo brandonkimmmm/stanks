@@ -148,6 +148,28 @@ paths:
             $ref: "#/definitions/MessageResponse"
       security:
         - Bearer: []
+  /player/birthday/stats:
+    x-swagger-router-controller: player
+    get:
+      description: Get player birthday stats
+      operationId: getPlayerStats
+      parameters:
+        - name: player_name
+          in: query
+          required: true
+          type: string
+          description: player name
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
+      security:
+        - Bearer: []
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

@@ -62,7 +62,8 @@ const LOGGER_NAMES = {
 	user: 'user',
 	general: 'general',
 	auth: 'auth',
-	token: 'token'
+	token: 'token',
+	player: 'player'
 };
 
 winston.loggers.add('default', generateLoggerConfiguration('all', false));
@@ -87,5 +88,6 @@ module.exports = {
 	loggerUser: winston.loggers.get(LOGGER_NAMES.user),
 	loggerGeneral: winston.loggers.get(LOGGER_NAMES.general),
 	loggerAuth: winston.loggers.get(LOGGER_NAMES.auth),
-	loggerToken: winston.loggers.get(LOGGER_NAMES.token)
+	loggerToken: winston.loggers.get(LOGGER_NAMES.token),
+	loggerPlayer: winston.loggers.get(LOGGER_NAMES.player)
 };
