@@ -24,7 +24,12 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		player_id: {
 			type: DataTypes.INTEGER,
-			allowNull: false
+			allowNull: false,
+			references: {
+				model: 'Players',
+				key: 'id'
+			},
+			onDelete: 'CASCADE'
 		}
 	}, {
 		createdAt: 'created_at',

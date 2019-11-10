@@ -49,22 +49,29 @@ each(teamData, (value, key) => {
 	i++;
 });
 
+const seasons = [];
+
 i = 1;
 each(playerTeamData, (value, key) => {
 	each(value, (playerTeam) => {
-		const teamId = playerTeam.team_id.toString();
-		const data = {
-			id: i,
-			team_id: playerTeam.team_id,
-			team: teamList[teamId].fullName,
-			team_row_id: teamList[teamId].teamRowId,
-			player: key,
-			player_row_id: playerList[key].playerRowId,
-			player_id: playerList[key].playerId,
-			from: playerTeam.from,
-			to: playerTeam.to
-		};
-		insertPlayerTeam.push(data);
+		const player = key;
+		const dataFrom = playerTeam.from;
+		const dataTo = playerTeam.to || 2020;
+
+		for (let i = dataFrom; i < dataTo; i++) {
+			const toNum = i + 1;
+			const to = toNum.toString().substr(2);
+			const from_to = i.toString() + '-' + to;
+			const data = {
+				from_to,
+				from: i,
+				to: toNum,
+				team_id: playerTeam.team_id,
+				player_id: playerList[player].playerRowId,
+				team_name: teamList[playerTeam.team_id].fullName
+			};
+			seasons.push(data);
+		}
 		i++;
 	});
 });
@@ -73,11 +80,11 @@ module.exports = {
 	up: async (queryInterface) => {
 		await queryInterface.bulkInsert('Players', insertPlayers);
 		await queryInterface.bulkInsert('Teams', insertTeams);
-		await queryInterface.bulkInsert('Player_Team', insertPlayerTeam);
+		await queryInterface.bulkInsert('Seasons', seasons);
 	},
 
 	down: async (queryInterface) => {
-		await queryInterface.bulkDelete('Player_Team', null, {});
+		await queryInterface.bulkDelete('Seasons', null, {});
 		await queryInterface.bulkDelete('Players', null, {});
 		await queryInterface.bulkDelete('Teams', null, {});
 	}

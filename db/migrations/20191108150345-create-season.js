@@ -29,8 +29,13 @@ module.exports = {
 				allowNull: false
 			},
 			player_id: {
-				type: Sequelize.STRING,
-				allowNull: false
+				type: Sequelize.INTEGER,
+				allowNull: false,
+				references: {
+					model: 'Players',
+					key: 'id'
+				},
+				onDelete: 'CASCADE'
 			},
 			created_at: {
 				allowNull: false,
