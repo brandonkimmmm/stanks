@@ -13,6 +13,7 @@
     "express": "4.12.3",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
+    "mathjs": "^6.2.3",
     "moment": "2.24.0",
     "moment-timezone": "0.5.27",
     "morgan": "1.9.1",

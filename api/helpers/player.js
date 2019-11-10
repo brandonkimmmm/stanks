@@ -2,7 +2,7 @@
 
 const { Player, Season } = require('../../db/models');
 const nba = require('nba-api-client');
-// const { each } = require('lodash');
+const { getAverageTraditionalStats } = require('./stats');
 
 const findPlayerStats = (name) => {
 	return Player.findOne({
@@ -18,10 +18,10 @@ const findPlayerStats = (name) => {
 			let birthday = player.dataValues.dob.substr(4);
 			return findStats(player.Seasons, player.player_id, birthday);
 		})
-		.then((stats) => {
-			console.log('after',stats);
-		})
-}
+		.then((games) => {
+			return getAverageTraditionalStats(games);
+		});
+};
 
 const findStats = (seasons, playerId, birthday) => {
 	return new Promise((resolve, reject) => {
@@ -41,7 +41,7 @@ const findStats = (seasons, playerId, birthday) => {
 				return Promise.all(promises);
 			}).then((data) => {
 				return Promise.all([data.map((season) => {
-					const players = season.PlayersSeasonTotals
+					const players = season.PlayersSeasonTotals;
 					Object.keys(players).map((id) => {
 						if (players[id].PLAYER_ID === playerId) {
 							stats.push(players[id]);
