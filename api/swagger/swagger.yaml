@@ -96,8 +96,8 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/MessageResponse"
-      security:
-        - Bearer: []
+      # security:
+      #   - Bearer: []
     put:
       description: Update user information
       operationId: putUser
@@ -120,8 +120,8 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/MessageResponse"
-      security:
-        - Bearer: []
+      # security:
+      #   - Bearer: []
   /user/change-password:
     x-swagger-router-controller: user
     put:
@@ -146,8 +146,8 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/MessageResponse"
-      security:
-        - Bearer: []
+      # security:
+      #   - Bearer: []
   /player/birthday/stats:
     x-swagger-router-controller: player
     get:
@@ -168,8 +168,8 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/MessageResponse"
-      security:
-        - Bearer: []
+      # security:
+      #   - Bearer: []
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
