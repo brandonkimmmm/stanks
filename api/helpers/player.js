@@ -4,6 +4,13 @@ const { Player, Season } = require('../../db/models');
 const nba = require('nba-api-client');
 const { getAverageTraditionalStats } = require('./stats');
 
+const findPlayers = () => {
+	return Player.findAll()
+		.then((players) => {
+			return players;
+		})
+}
+
 const findPlayerStats = (name) => {
 	return Player.findOne({
 		where: {
@@ -56,5 +63,6 @@ const findStats = (seasons, playerId, birthday) => {
 };
 
 module.exports = {
+	findPlayers,
 	findPlayerStats
 };

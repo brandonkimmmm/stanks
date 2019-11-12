@@ -148,6 +148,22 @@ paths:
             $ref: "#/definitions/MessageResponse"
       # security:
       #   - Bearer: []
+  /players:
+    x-swagger-router-controller: player
+    get:
+      description: Get all players
+      operationId: getPlayers
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
   /player/birthday/stats:
     x-swagger-router-controller: player
     get:
