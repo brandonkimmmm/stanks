@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
 		nickname: {
 			type: DataTypes.STRING,
 			allowNull: true
+		},
+		image: {
+			type: DataTypes.STRING,
+			allowNull: false
 		}
 	}, {
 		createdAt: 'created_at',
