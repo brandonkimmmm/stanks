@@ -44,6 +44,8 @@ const findStats = (seasons, playerId, birthday) => {
 				date = endYear.toString() + birthday;
 			} else if (month <= 12 && month >= 10) {
 				date = startYear.toString() + birthday;
+			} else {
+				throw new Error('Player never played on his birthday');
 			}
 			promises.push(nba.teamPlayerStats({
 				TeamID: season.team_id,
@@ -83,7 +85,6 @@ const findStats = (seasons, playerId, birthday) => {
 			}).then((data) => {
 				return Promise.all([data.map((season) => {
 					const players = season.PlayersSeasonTotals;
-					console.log(players);
 					Object.keys(players).map((id) => {
 						if (players[id].PLAYER_ID === playerId) {
 							stats.push(players[id]);
@@ -92,6 +93,9 @@ const findStats = (seasons, playerId, birthday) => {
 				})]);
 			})
 			.then(() => {
+				if (stats.length === 0) {
+					throw new Error('Player never played on his birthday');
+				}
 				resolve(stats);
 			});
 	});
