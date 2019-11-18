@@ -164,6 +164,25 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/MessageResponse"
+  /player:
+    x-swagger-router-controller: player
+    get:
+      description: Get Player
+      operationId: getPlayer
+      parameters:
+        - name: player_name
+          in: query
+          type: string
+          required: true
+      responses:
+        "200":
+          description: Success
+          schema:
+            type: object
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/MessageResponse"
   /player/birthday/stats:
     x-swagger-router-controller: player
     get:

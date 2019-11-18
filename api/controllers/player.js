@@ -1,7 +1,7 @@
 'use strict';
 
 const { loggerPlayer } = require('../../config/logger');
-const { findPlayers, findPlayerStats } = require('../helpers/player');
+const { findPlayers, findPlayerStats, findPlayer } = require('../helpers/player');
 
 const getPlayers = (req, res) => {
 	loggerPlayer.verbose('controllers/player/getPlayers', 'request');
@@ -28,7 +28,21 @@ const getPlayerStats = (req, res) => {
 		});
 };
 
+const getPlayer = (req, res) => {
+	const playerName = req.swagger.params.player_name.value;
+	loggerPlayer.verbose('controllers/player/getPlayer', playerName);
+
+	findPlayer(playerName)
+		.then((player) => {
+			res.json(player);
+		})
+		.catch((error) => {
+			res.status(error.status || 400).json({ message: error.message });
+		});
+};
+
 module.exports = {
 	getPlayers,
+	getPlayer,
 	getPlayerStats
 };

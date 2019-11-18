@@ -6,11 +6,16 @@ const { getAverageTraditionalStats } = require('./stats');
 const moment = require('moment');
 
 const findPlayers = () => {
-	return Player.findAll()
-		.then((players) => {
-			return players;
-		})
-}
+	return Player.findAll();
+};
+
+const findPlayer = (full_name) => {
+	return Player.findOne({
+		where: {
+			full_name
+		}
+	});
+};
 
 const findPlayerStats = (name) => {
 	return Player.findOne({
@@ -103,5 +108,6 @@ const findStats = (seasons, playerId, birthday) => {
 
 module.exports = {
 	findPlayers,
+	findPlayer,
 	findPlayerStats
 };
