@@ -38,13 +38,13 @@ const findStats = (seasons, playerId, birthday) => {
 		Promise.all([seasons.map((season) => {
 			const month = parseInt(birthday.substr(1, 2));
 			let date;
+			let startYear = season.from;
+			let endYear = season.from + 1;
 			if (month >= 1 && month <= 6) {
-				const from = season.from + 1;
-				date = from.toString() + birthday;
+				date = endYear.toString() + birthday;
 			} else if (month <= 12 && month >= 10) {
-				date = season.from.toString() + birthday;
+				date = startYear.toString() + birthday;
 			}
-			console.log(date);
 			promises.push(nba.teamPlayerStats({
 				TeamID: season.team_id,
 				Season: season.from_to,
@@ -52,12 +52,38 @@ const findStats = (seasons, playerId, birthday) => {
 				DateFrom: date,
 				DateTo: date
 			}));
+			if (moment(date).isBefore(startYear.toString() + '-10-31')) {
+				promises.push(nba.teamPlayerStats({
+					TeamID: season.team_id,
+					Season: season.from_to,
+					SeasonType: 'Pre+Season',
+					DateFrom: date,
+					DateTo: date
+				}));
+			} else if (moment(date).isAfter(endYear.toString() + '-02-10') && moment(date).isBefore(endYear.toString() + '-02-20')) {
+				promises.push(nba.teamPlayerStats({
+					TeamID: season.team_id,
+					Season: season.from_to,
+					SeasonType: 'All-Star',
+					DateFrom: date,
+					DateTo: date
+				}));
+			} else if (moment(date).isAfter(endYear.toString() + '-04-10')) {
+				promises.push(nba.teamPlayerStats({
+					TeamID: season.team_id,
+					Season: season.from_to,
+					SeasonType: 'Playoffs',
+					DateFrom: date,
+					DateTo: date
+				}));
+			}
 		})])
 			.then(() => {
 				return Promise.all(promises);
 			}).then((data) => {
 				return Promise.all([data.map((season) => {
 					const players = season.PlayersSeasonTotals;
+					console.log(players);
 					Object.keys(players).map((id) => {
 						if (players[id].PLAYER_ID === playerId) {
 							stats.push(players[id]);
