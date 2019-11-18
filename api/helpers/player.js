@@ -3,6 +3,7 @@
 const { Player, Season } = require('../../db/models');
 const nba = require('nba-api-client');
 const { getAverageTraditionalStats } = require('./stats');
+const moment = require('moment');
 
 const findPlayers = () => {
 	return Player.findAll()
@@ -35,7 +36,15 @@ const findStats = (seasons, playerId, birthday) => {
 		const stats = [];
 		const promises = [];
 		Promise.all([seasons.map((season) => {
-			const date = season.from.toString() + birthday;
+			const month = parseInt(birthday.substr(1, 2));
+			let date;
+			if (month >= 1 && month <= 6) {
+				const from = season.from + 1;
+				date = from.toString() + birthday;
+			} else if (month <= 12 && month >= 10) {
+				date = season.from.toString() + birthday;
+			}
+			console.log(date);
 			promises.push(nba.teamPlayerStats({
 				TeamID: season.team_id,
 				Season: season.from_to,
