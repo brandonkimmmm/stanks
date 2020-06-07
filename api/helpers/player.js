@@ -1,7 +1,7 @@
 'use strict';
 
 const { Player, Season } = require('../../db/models');
-const nba = require('nba-api-client');
+const nba = require('nba');
 const { getAverageTraditionalStats } = require('./stats');
 const moment = require('moment');
 
@@ -52,31 +52,31 @@ const findStats = (seasons, playerId, birthday) => {
 			} else {
 				throw new Error('Player never played on his birthday');
 			}
-			promises.push(nba.teamPlayerStats({
+			promises.push(nba.stats.playerStats({
 				TeamID: season.team_id,
 				Season: season.from_to,
-				SeasonType: 'Regular+Season',
+				SeasonType: 'Regular Season',
 				DateFrom: date,
 				DateTo: date
 			}));
 			if (moment(date).isBefore(startYear.toString() + '-10-31')) {
-				promises.push(nba.teamPlayerStats({
+				promises.push(nba.stats.playerStats({
 					TeamID: season.team_id,
 					Season: season.from_to,
-					SeasonType: 'Pre+Season',
+					SeasonType: 'Pre Season',
 					DateFrom: date,
 					DateTo: date
 				}));
 			} else if (moment(date).isAfter(endYear.toString() + '-02-10') && moment(date).isBefore(endYear.toString() + '-02-20')) {
-				promises.push(nba.teamPlayerStats({
+				promises.push(nba.stats.playerStats({
 					TeamID: season.team_id,
 					Season: season.from_to,
-					SeasonType: 'All-Star',
+					SeasonType: 'All Star',
 					DateFrom: date,
 					DateTo: date
 				}));
 			} else if (moment(date).isAfter(endYear.toString() + '-04-10')) {
-				promises.push(nba.teamPlayerStats({
+				promises.push(nba.stats.playerStats({
 					TeamID: season.team_id,
 					Season: season.from_to,
 					SeasonType: 'Playoffs',
@@ -102,6 +102,9 @@ const findStats = (seasons, playerId, birthday) => {
 					throw new Error('Player never played on his birthday');
 				}
 				resolve(stats);
+			})
+			.catch((err) => {
+				reject(err);
 			});
 	});
 };
